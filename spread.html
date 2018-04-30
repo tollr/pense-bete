@@ -1,0 +1,26 @@
+<script>
+
+  // notre objet de départ qui représente le state, composé de trois propriétés de type Array
+  const obj = {
+    biscuits: [
+      'oreo',
+      'Pim\'s',
+      'Granola',
+      'Petit écolier'
+    ],
+    utils: ['napkins', 'forks'],
+    juices: ['Orange juice']
+  };
+
+  // On ne modifie pas directement le state en accédant à ses propriétés, mais on recrée un nouvel objet à partir de notre state initial
+  const newObj = {
+    // notre newObj reçoit les propriétés du state initial
+    ...obj, 
+    // nos biscuits initiaux sont "étalés" dans notre nouvel objet et on en ajoute 2 nouveaux
+    biscuits: [...obj.biscuits, ...['lu', 'tasse']], 
+    juices: [...obj.juices, ...['cocoa']]};
+
+
+  console.log(obj);
+  console.log(newObj);
+</script>
